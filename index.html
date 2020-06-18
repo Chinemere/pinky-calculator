@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+web">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>My calc</title>
+</head>
+
+<body class="container-fluid">
+    <div class="d-flex justify-content-center" id="vertical-align">
+
+        <div class="main-container ">
+            <div class="row ">
+                <div class="col-sm-12 d-flex justify-content-center">
+                    <form class="form-group">
+                        <input type="text" class="form-control " id="ans" placeholder="0">
+                    </form>
+                </div>
+            </div>
+
+
+            <div class=" d-flex justify-content-center">
+                <div class="row" id="number-container">
+                    <div class="col-sm-12">
+
+
+                        <div class="col-sm-12" id="cmain">
+                            <div class="row" id="c">
+                                <div class="col-sm-3 ">
+
+
+                                    <div class="c d-flex justify-content-center"
+                                        onclick="clearing(document.getElementById('ans').value)">
+                                        <div class="c2 d-flex justify-content-center">
+                                            <div class=" row c3  d-flex justify-content-center">
+
+                                                <div class=" col-sm-12 c4  d-flex justify-content-center " id="cc">
+                                                    <h1 class="c-h1"> C </h1>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-3">
+
+                                    <div class="pm d-flex justify-content-center" onclick="seven('/')">
+                                        <div class=" col-sm-12 pm4  d-flex justify-content-center ">
+                                            <h1 class="pm-h1">/</h1>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-3">
+                                    <div class="percent d-flex justify-content-center" onclick="seven('%')">
+                                        <div class="percent2 d-flex justify-content-center">
+                                            <div class=" row percent3  d-flex justify-content-center">
+
+                                                <div class=" col-sm-12 percent4  d-flex justify-content-center ">
+                                                    <h1 class="percent-h1">%</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-3">
+
+                                    <div class="divide d-flex justify-content-center" onclick="seven('-')">
+                                        <div class="divide2 d-flex justify-content-center">
+                                            <div class=" row divide3  d-flex justify-content-center">
+
+                                                <div class=" col-sm-12 divid4  d-flex justify-content-center ">
+                                                    <h1 class="divide-h1">-</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="col-sm-12" id="sevenmain">
+                            <div class="row" id="seven">
+                                <div class="col-sm-3 ">
+
+                                    <div class="seven d-flex justify-content-center" id="seven1" onclick="seven(7)">
+
+                                        <div class=" col-sm-12 seven4  d-flex justify-content-center ">
+                                            <h1 class="seven-h1 gen">7</h1>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-3">
+                                    <div class="eight d-flex justify-content-center" id="eight">
+
+                                        <div class=" col-sm-12 eight4  d-flex justify-content-center"
+                                            onclick="seven(8)">
+                                            <h1 class="eight-h1">8</h1>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-3">
+                                    <div class="nine d-flex justify-content-center" onclick="seven(9)">
+
+                                        <div class=" col-sm-12 nine4  d-flex justify-content-center ">
+                                            <h1 class="nine-h1">9</h1>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-3" id="pink-del">
+
+                                    <div class="del d-flex justify-content-center" onclick="deleting()">
+
+                                        <div class=" col-sm-12 del4  d-flex justify-content-center ">
+                                            <h1 class="del-h1">Del</h1>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-sm-12" id="fourmain">
+                            <div class="row" id="four">
+                                <div class="col-sm-3 ">
+                                    <div class="four d-flex justify-content-center" onclick="seven(4)">
+                                        <div class=" col-sm-12 four4  d-flex justify-content-center ">
+                                            <h1 class="four-h1">4</h1>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-3">
+                                    <div class="five d-flex justify-content-center" onclick="seven(5)">
+                                        <div class=" col-sm-12 five4  d-flex justify-content-center ">
+                                            <h1 class="five-h1">5</h1>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-3">
+                                    <div class="six d-flex justify-content-center" onclick="seven(6)">
+                                        <div class=" col-sm-12 six4  d-flex justify-content-center ">
+                                            <h1 class="six-h1">6</h1>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-3" id="pink-times" onclick="seven('*')">
+                                    <div class="times d-flex justify-content-center">
+                                        <div class=" col-sm-12 times4  d-flex justify-content-center" id="times5">
+                                            <h1 class="times-h1">*</h1>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div class="col-sm-12" id="onemain">
+                            <div class="row" id="one">
+                                <div class="col-sm-3 ">
+
+
+                                    <div class="one d-flex justify-content-center" onclick="seven(1)">
+                                        <div class=" col-sm-12 one4  d-flex justify-content-center ">
+                                            <h1 class="one-h1">1</h1>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="col-sm-3">
+                                    <div class="two d-flex justify-content-center" onclick="seven(2)">
+                                        <div class=" col-sm-12 two4  d-flex justify-content-center ">
+                                            <h1 class="two-h1">2</h1>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-3">
+                                    <div class="three d-flex justify-content-center" onclick="seven(3)">
+                                        <div class=" col-sm-12 three4  d-flex justify-content-center ">
+                                            <h1 class="three-h1">3</h1>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-3" id="pink-plus">
+                                    <div class="plus d-flex justify-content-center" id="plus">
+                                        <div class=" col-sm-12 plus4  d-flex justify-content-center ">
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        <!--here-->
+
+
+
+
+
+                        <div class="col-sm-12" id="dotmain">
+                            <div class="row" id="dot">
+                                <div class="col-sm-3 ">
+
+
+                                    <div class="dot d-flex justify-content-center" onclick="seven('.')">
+                                        <div class=" col-sm-12 dot4  d-flex justify-content-center ">
+                                            <h1 class="dot-h1">.</h1>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="col-sm-3">
+                                    <div class="zero d-flex justify-content-center" onclick="seven(0)">
+                                        <div class=" col-sm-12 zero4  d-flex justify-content-center ">
+                                            <h1 class="zero-h1">0</h1>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-sm-3">
+                                    <div class="equal d-flex justify-content-center">
+                                        <div class=" col-sm-12 equal4  d-flex justify-content-center ">
+                                            <h1 class="equal-h1">=</h1>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-sm-3" id="pink-pluss">
+                                    <div class="pluss d-flex justify-content-center" id="pluss" onclick="sumation()">
+                                        <div class=" col-sm-12 pluss4  d-flex justify-content-center ">
+                                            <h1 class="pluss-h1">+</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script> -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>

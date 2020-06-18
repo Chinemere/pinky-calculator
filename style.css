@@ -1,0 +1,70 @@
+body{
+    width: 50px;
+    height: 50px;
+    background: linear-gradient( 90deg, #F2505F 50%, #EBEBEB 50%);
+    font-family: raleway, Arial, Helvetica, sans-serif;
+}
+
+.main-container{
+    width: 400px;
+    height:550px;
+    background-color: white;
+    box-shadow: 5px 5px 0px  #CF4452;
+    box-shadow: -5px -5px 40px  #CF4452;
+    border-style: none;
+    border-radius: 20px;
+    
+}
+
+#vertical-align{
+    min-height: 100%;
+    min-height: 100vh;
+    align-items: center;
+}
+
+#ans{
+    width:350px;
+    height:80px;
+    margin-top: 100px;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color:#F2505F ;
+}
+
+#number-container{
+    width: 350px;
+    height:300px;
+    background-color: #fff;
+    /* opacity: 0.3; */
+}
+
+
+#cmain{
+    background-color: #F2505F;
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+}
+
+#sevenmain, #fourmain, #onemain, #dotmain{
+    background-color: white;
+    /* padding: 0px; */
+    font-size: 30px;
+    color: #F2505F;
+}
+
+#pink-del, #pink-times, #pink-plus, #pink-pluss{
+    background-color:#F2505F;
+    color: white;
+}
+
+.seven-h1, .c-h1, .pm-h1, .percent-h1, .divide-h1, .eight-h1,
+.nine-h1, .del-h1, .four-h1, .five-h1, .six-h1, .times-h1,
+.one-h1, .two-h1, .three-h1, .dot-h1, .zero-h1, .equal-h1, .pluss-h1{
+    cursor: default;
+}
+
+.form-control{
+font-size: 30px;
+}
+
