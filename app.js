@@ -5,7 +5,7 @@ function numberValue(num) {
 }
 
 //function for clearing the entire input on the screen
-function clearing(bas) {
+function clearing(clear) {
     var answer = "";
     document.getElementById('ans').value = answer;
 }
@@ -22,25 +22,25 @@ function deleting() {
 
 // code for the mathematical symbols
 function operator(opSymbol) {
-    var s = document.getElementById('ans')
+    var operators = document.getElementById('ans')
     switch (opSymbol) {
         case "+":
-            s.value += "+"
+            operators.value += "+"
             break;
         case "-":
-            s.value += "-"
+            operators.value += "-"
             break;
         case "*":
-            s.value += "*"
+            operators.value += "*"
             break;
         case "/":
-            s.value += "/"
+            operators.value += "/"
             break;
         case "%":
-            s.value += "%"
+            operators.value += "%"
             break;
         case "+/-":
-            s.value += "-"
+            operators.value += "-"
             break;
     }
 }
