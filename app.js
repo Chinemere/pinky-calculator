@@ -1,23 +1,16 @@
-
-// var vim = document.getElementById("ans").value
-// vim = Number(vim)
-
-
-function seven(num) {
+//function for displaying numbers on the screen
+function numberValue(num) {
     var answer = document.getElementById("ans");
     answer.value += num;
-    var answerMain = Number(answer.value);
-    answer.value = answerMain
-    // console.log(typeof(answerMain))
 }
 
+//function for clearing the entire input on the screen
 function clearing(bas) {
-    var answer = bas;
-    answer = ""
-    document.getElementById('ans').value = answer
-
+    var answer = "";
+    document.getElementById('ans').value = answer;
 }
 
+//Function for deleting an input on the screen
 function deleting() {
     var answer3 = document.getElementById('ans').value;
     var answer4 = Array.from(answer3)
@@ -27,28 +20,38 @@ function deleting() {
     document.getElementById('ans').value = answer6
 }
 
-function sumation() {
-    var kil = sum(document.getElementById('ans').value)
-    console.log(kil)
-
-
-
-
-    // var ii = 0
-    // var sumvalue2 = 0
-    // var sumvalue = document.getElementById('ans').value;
-    // if (sumvalue !== " ") {
-    //     ii = 1
-    //     sumvalue2 = sumvalue;
-    //     sumvalue = 0
-    //     console.log(sumvalue2 + sumvalue)
-    // }
-
+// code for the mathematical symbols
+function operator(opSymbol) {
+    var s = document.getElementById('ans')
+    switch (opSymbol) {
+        case "+":
+            s.value += "+"
+            break;
+        case "-":
+            s.value += "-"
+            break;
+        case "*":
+            s.value += "*"
+            break;
+        case "/":
+            s.value += "/"
+            break;
+        case "%":
+            s.value += "%"
+            break;
+        case "+/-":
+            s.value += "-"
+            break;
+    }
 }
 
 
-
-
+// Code for the equal sign
+function calc() {
+    var answer = document.getElementById('ans').value
+    var finalAns = eval(answer)
+    document.getElementById('ans').value = finalAns
+}
 
 
 

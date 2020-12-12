@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+web">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
     <title>My calc</title>
 </head>
@@ -45,7 +47,7 @@
                                             <div class=" row c3  d-flex justify-content-center">
 
                                                 <div class=" col-sm-12 c4  d-flex justify-content-center " id="cc">
-                                                    <h1 class="c-h1"> C </h1>
+                                                    <h3 class="c-h1"> C </h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -58,9 +60,9 @@
 
                                 <div class="col-sm-3">
 
-                                    <div class="pm d-flex justify-content-center" onclick="seven('/')">
+                                    <div class="pm d-flex justify-content-center" onclick="operator('/')">
                                         <div class=" col-sm-12 pm4  d-flex justify-content-center ">
-                                            <h1 class="pm-h1">/</h1>
+                                            <h3 class="pm-h1" id="div">/</h3>
                                         </div>
 
                                     </div>
@@ -68,12 +70,12 @@
 
 
                                 <div class="col-sm-3">
-                                    <div class="percent d-flex justify-content-center" onclick="seven('%')">
+                                    <div class="percent d-flex justify-content-center" onclick="operator('%')">
                                         <div class="percent2 d-flex justify-content-center">
                                             <div class=" row percent3  d-flex justify-content-center">
 
                                                 <div class=" col-sm-12 percent4  d-flex justify-content-center ">
-                                                    <h1 class="percent-h1">%</h1>
+                                                    <h3 class="percent-h1" id="per">%</h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -84,12 +86,12 @@
 
                                 <div class="col-sm-3">
 
-                                    <div class="divide d-flex justify-content-center" onclick="seven('-')">
+                                    <div class="divide d-flex justify-content-center" onclick="operator('-')">
                                         <div class="divide2 d-flex justify-content-center">
                                             <div class=" row divide3  d-flex justify-content-center">
 
                                                 <div class=" col-sm-12 divid4  d-flex justify-content-center ">
-                                                    <h1 class="divide-h1">-</h1>
+                                                    <h1 class="divide-h1" id="min">-</h1>
                                                 </div>
                                             </div>
                                         </div>
@@ -112,13 +114,12 @@
                             <div class="row" id="seven">
                                 <div class="col-sm-3 ">
 
-                                    <div class="seven d-flex justify-content-center" id="seven1" onclick="seven(7)">
+                                    <div class="seven d-flex justify-content-center" id="seven1"
+                                        onclick="numberValue(7)">
 
                                         <div class=" col-sm-12 seven4  d-flex justify-content-center ">
-                                            <h1 class="seven-h1 gen">7</h1>
+                                            <h1 class="seven-h1 gen" id="sev">7</h1>
                                         </div>
-
-
 
                                     </div>
                                 </div>
@@ -128,7 +129,7 @@
                                     <div class="eight d-flex justify-content-center" id="eight">
 
                                         <div class=" col-sm-12 eight4  d-flex justify-content-center"
-                                            onclick="seven(8)">
+                                            onclick="numberValue(8)">
                                             <h1 class="eight-h1">8</h1>
                                         </div>
 
@@ -137,7 +138,7 @@
 
 
                                 <div class="col-sm-3">
-                                    <div class="nine d-flex justify-content-center" onclick="seven(9)">
+                                    <div class="nine d-flex justify-content-center" onclick="numberValue(9)">
 
                                         <div class=" col-sm-12 nine4  d-flex justify-content-center ">
                                             <h1 class="nine-h1">9</h1>
@@ -151,7 +152,7 @@
                                     <div class="del d-flex justify-content-center" onclick="deleting()">
 
                                         <div class=" col-sm-12 del4  d-flex justify-content-center ">
-                                            <h1 class="del-h1">Del</h1>
+                                            <h3 class="del-h1">Del</h3>
                                         </div>
 
                                     </div>
@@ -168,7 +169,7 @@
                         <div class="col-sm-12" id="fourmain">
                             <div class="row" id="four">
                                 <div class="col-sm-3 ">
-                                    <div class="four d-flex justify-content-center" onclick="seven(4)">
+                                    <div class="four d-flex justify-content-center" onclick="numberValue(4)">
                                         <div class=" col-sm-12 four4  d-flex justify-content-center ">
                                             <h1 class="four-h1">4</h1>
                                         </div>
@@ -178,7 +179,7 @@
 
 
                                 <div class="col-sm-3">
-                                    <div class="five d-flex justify-content-center" onclick="seven(5)">
+                                    <div class="five d-flex justify-content-center" onclick="numberValue(5)">
                                         <div class=" col-sm-12 five4  d-flex justify-content-center ">
                                             <h1 class="five-h1">5</h1>
                                         </div>
@@ -187,7 +188,7 @@
 
 
                                 <div class="col-sm-3">
-                                    <div class="six d-flex justify-content-center" onclick="seven(6)">
+                                    <div class="six d-flex justify-content-center" onclick="numberValue(6)">
                                         <div class=" col-sm-12 six4  d-flex justify-content-center ">
                                             <h1 class="six-h1">6</h1>
                                         </div>
@@ -195,10 +196,10 @@
                                 </div>
 
 
-                                <div class="col-sm-3" id="pink-times" onclick="seven('*')">
-                                    <div class="times d-flex justify-content-center">
+                                <div class="col-sm-3" id="pink-times">
+                                    <div class="times d-flex justify-content-center" onclick="operator('*')">
                                         <div class=" col-sm-12 times4  d-flex justify-content-center" id="times5">
-                                            <h1 class="times-h1">*</h1>
+                                            <h1 class="times-h1" id="mul">*</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -219,7 +220,7 @@
                                 <div class="col-sm-3 ">
 
 
-                                    <div class="one d-flex justify-content-center" onclick="seven(1)">
+                                    <div class="one d-flex justify-content-center" onclick="numberValue(1)">
                                         <div class=" col-sm-12 one4  d-flex justify-content-center ">
                                             <h1 class="one-h1">1</h1>
                                         </div>
@@ -230,7 +231,7 @@
 
 
                                 <div class="col-sm-3">
-                                    <div class="two d-flex justify-content-center" onclick="seven(2)">
+                                    <div class="two d-flex justify-content-center" onclick="numberValue(2)">
                                         <div class=" col-sm-12 two4  d-flex justify-content-center ">
                                             <h1 class="two-h1">2</h1>
                                         </div>
@@ -239,7 +240,7 @@
 
 
                                 <div class="col-sm-3">
-                                    <div class="three d-flex justify-content-center" onclick="seven(3)">
+                                    <div class="three d-flex justify-content-center" onclick="numberValue(3)">
                                         <div class=" col-sm-12 three4  d-flex justify-content-center ">
                                             <h1 class="three-h1">3</h1>
                                         </div>
@@ -247,9 +248,11 @@
                                 </div>
 
 
-                                <div class="col-sm-3" id="pink-plus">
+                                <div class="col-sm-3" id="pink-plus" onclick="operator('+/-')">
                                     <div class="plus d-flex justify-content-center" id="plus">
                                         <div class=" col-sm-12 plus4  d-flex justify-content-center ">
+                                            <h3 class="three-h1">+/-</h3>
+
 
                                         </div>
 
@@ -271,7 +274,7 @@
                                 <div class="col-sm-3 ">
 
 
-                                    <div class="dot d-flex justify-content-center" onclick="seven('.')">
+                                    <div class="dot d-flex justify-content-center" onclick="numberValue('.')">
                                         <div class=" col-sm-12 dot4  d-flex justify-content-center ">
                                             <h1 class="dot-h1">.</h1>
                                         </div>
@@ -282,7 +285,7 @@
 
 
                                 <div class="col-sm-3">
-                                    <div class="zero d-flex justify-content-center" onclick="seven(0)">
+                                    <div class="zero d-flex justify-content-center" onclick="numberValue(0)">
                                         <div class=" col-sm-12 zero4  d-flex justify-content-center ">
                                             <h1 class="zero-h1">0</h1>
                                         </div>
@@ -295,7 +298,7 @@
                                 <div class="col-sm-3">
                                     <div class="equal d-flex justify-content-center">
                                         <div class=" col-sm-12 equal4  d-flex justify-content-center ">
-                                            <h1 class="equal-h1">=</h1>
+                                            <h1 class="equal-h1" id="equ" onclick="calc()">=</h1>
                                         </div>
 
                                     </div>
@@ -303,9 +306,9 @@
 
 
                                 <div class="col-sm-3" id="pink-pluss">
-                                    <div class="pluss d-flex justify-content-center" id="pluss" onclick="sumation()">
+                                    <div class="pluss d-flex justify-content-center" id="pluss" onclick="operator('+')">
                                         <div class=" col-sm-12 pluss4  d-flex justify-content-center ">
-                                            <h1 class="pluss-h1">+</h1>
+                                            <h1 class="pluss-h1" id="add">+</h1>
                                         </div>
                                     </div>
                                 </div>

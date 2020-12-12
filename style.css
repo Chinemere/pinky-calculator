@@ -2,8 +2,9 @@ body{
     width: 50px;
     height: 50px;
     background: linear-gradient( 90deg, #F2505F 50%, #EBEBEB 50%);
-    font-family: raleway, Arial, Helvetica, sans-serif;
+    font-family: 'VT323', monospace;
 }
+
 
 .main-container{
     width: 400px;
